@@ -1,0 +1,27 @@
+//lang algo-gmc
+
+//Take input sentence from user
+sentence := input("Enter a sentence: ")
+
+//Initialize counters
+char_count := 0
+word_count := 1  # We assume there is at least one word in the sentence
+vowel_count := 0
+
+//Loop over each character in the sentence
+for char in sentence:
+    //Increment character count
+    char_count += 1
+    
+    //If the character is a space, increment word count
+    if char == ' ':
+        word_count += 1
+    
+    //If the character is a vowel, increment vowel count
+    if char in 'aeiouAEIOU':
+        vowel_count += 1
+
+//Output results
+write("Length of sentence:", char_count)
+write("Number of words in sentence:", word_count)
+write("Number of vowels in sentence:", vowel_count)
